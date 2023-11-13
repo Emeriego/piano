@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     background-color: #ddd;
@@ -21,10 +22,14 @@ body{
     align-items: center;
 }
 .header{
-    margin-inline: 2rem;
+    width: 90%;
+    /* padding: 1rem; */
+    /* margin-inline: 1rem; */
     margin-top: 2rem;
     display: flex;
-    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .keyboard{
     width: 90%;
@@ -41,20 +46,90 @@ body{
 
 }
 .keyboard .key{
-    color: #ddd;
+    color: #a2a2a2;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
+
 .keyboard .white{
     width: 8rem;
     height: 20rem;
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     border: solid black;
 }
 .keyboard .black{
     width: 5rem;
-    height: 15rem;
+    height: 13rem;
     background-color: rgb(24, 22, 22);
     border-radius: 0 0 0.5rem 0.5rem;
     z-index: 2;
     margin-inline: -1.8rem;
+}
+.volume{
+    width: 13rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.volume input{
+    accent-color: #e41111;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+/* .volume input[type="range"]::-webkit-slider-runnable-track {
+    background: #053a5f;
+    height: 0.2rem;
+  } */
+.toggle-keys{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggle-keys input{
+    width: 1.9rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: #a2a2a2;
+    appearance: none;
+    margin-left: 1rem;
+    align-self: center;
+    position: relative;
+    cursor: pointer;
+}
+.toggle-keys input::before{
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 0.6rem;
+    background-color: #523030;
+    appearance: none;
+    /* margin-left: 1rem; */
+    align-self: center;
+    position: absolute;
+    top: 10%;
+    left: 4px;
+}
+.toggle-keys input:checked:before{
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 0.6rem;
+    background-color: #b50f0f;
+    appearance: none;
+    /* margin-left: 1rem; */
+    align-self: center;
+    position: absolute;
+    top: 10%;
+    left: 14px;
 }
