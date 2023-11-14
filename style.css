@@ -63,6 +63,16 @@ body{
     background-color: #fff;
     border-radius: 0.8rem;
     border: solid black;
+    transition: all 500ms ease;
+    background: linear-gradient(#fff 97%, #eee 3%);
+}
+.keyboard .white:active{
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(#fff, rgb(193, 191, 191));
+}
+.white.active{
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(#fff, rgb(193, 191, 191));
 }
 .keyboard .black{
     width: 5rem;
@@ -71,6 +81,17 @@ body{
     border-radius: 0 0 0.5rem 0.5rem;
     z-index: 2;
     margin-inline: -1.8rem;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #152830, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #13252d, #203A43, #0F2027);
+}
+.black.active{
+    box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(rgb(2, 2, 2), rgb(82, 81, 81));
+}
+.keyboard .black:active{
+    box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(rgb(2, 2, 2), rgb(82, 81, 81));
 }
 .volume{
     width: 13rem;
@@ -132,4 +153,7 @@ body{
     position: absolute;
     top: 10%;
     left: 14px;
+}
+.key.hide{
+    color: transparent;
 }
