@@ -31,6 +31,5 @@ toggleHandler =()=>{
 }
 document.addEventListener("keydown", (e) => pressHandler(e.key));
 volumeSlider.addEventListener("input", (e) => volumeHandler(e))
-
 toggleLabel.addEventListener("click", (e) => toggleHandler(e));
 
